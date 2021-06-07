@@ -1,0 +1,58 @@
+﻿@model Bookstore.Models.BookDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BookDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BookTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookAuthor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookAuthor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookRating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookRating)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BookID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

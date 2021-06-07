@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bookstoredbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BookDetail">
+    <Key>
+      <PropertyRef Name="BookID" />
+    </Key>
+    <Property Name="BookID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BookTitle" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BookAuthor" Type="varchar" MaxLength="70" Nullable="false" />
+    <Property Name="BookDescription" Type="varchar" MaxLength="300" />
+    <Property Name="BookPrice" Type="smallmoney" Nullable="false" />
+    <Property Name="BookRating" Type="decimal" Precision="2" Scale="1" />
+  </EntityType>
+  <EntityContainer Name="bookstoredbModelStoreContainer">
+    <EntitySet Name="BookDetail" EntityType="Self.BookDetail" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

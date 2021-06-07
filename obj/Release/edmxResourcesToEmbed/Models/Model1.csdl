@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bookstoredbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BookDetail">
+    <Key>
+      <PropertyRef Name="BookID" />
+    </Key>
+    <Property Name="BookID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BookTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BookAuthor" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BookDescription" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="BookPrice" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+    <Property Name="BookRating" Type="Decimal" Precision="2" Scale="1" />
+  </EntityType>
+  <EntityContainer Name="bookstoredbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BookDetail" EntityType="Self.BookDetail" />
+  </EntityContainer>
+</Schema>
